@@ -1,0 +1,136 @@
+@media screen and (min-width: 576px) {
+}
+
+.navbar {
+  height: 80px;
+  background-color: #ea9e1e;
+  font-size: 19px;
+}
+.navbar a {
+  margin-left: 20px;
+  color: white;
+}
+.navbar a:hover {
+  color: red;
+}
+#toogle {
+  display: none;
+  cursor: pointer;
+}
+.navbar-list {
+  display: flex;
+}
+.cart {
+  margin-top: 7px;
+}
+.input-search input {
+  width: 300px;
+  border-radius: 7px;
+}
+.input-search ::placeholder {
+  font-size: small;
+}
+.search-button {
+  border-radius: 7px;
+  background-color: coral;
+  color: white;
+}
+/*main_img product */
+.main_img {
+  height: 440px;
+  width: 100%;
+  background-image: url("/images/product/main_img.jpg");
+}
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.category.list-group a {
+  color: black;
+  text-decoration: none;
+}
+.service {
+  color: #ea9e1e;
+  font-family: cursive;
+  text-align: center;
+}
+.service img {
+  width: 1000px;
+  height: 1600px;
+  position: relative;
+  left: 20px;
+}
+
+.service.otherservice {
+  width: 1200px;
+  height: 1600px;
+  position: relative;
+  left: 20px;
+}
+.type-boss input {
+  margin-left: 20px;
+}
+.Hot-product img {
+  margin-top: 10px;
+  width: 200px;
+  height: 200px;
+}
+.Hot-product-item {
+  display: flex;
+  flex-direction: row;
+}
+/*
+css about.html
+*/
+.about {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.about img {
+  height: 300px;
+  width: 100%;
+}
+.about-1 div :nth-child(1) {
+  margin-bottom: 50px;
+}
+.about-1 {
+  text-align: right;
+}
+.about-2 {
+  text-align: left;
+}
+.about-2 div :nth-child(1) {
+  margin-bottom: 80px;
+}
+
+/* 
+Cart.css
+*/
+.cart {
+  font-size: 20px;
+  margin-left: 40px;
+}
+.cart table {
+  border-collapse: collapse;
+}
+.cart td {
+  border: 1px solid black;
+}
+#name {
+  width: 50%;
+}
+#count {
+  width: 15%;
+}
+
+.cost-total {
+  text-align: end;
+}
+.cart thead {
+  background-color: gray;
+}
+.toggle-pro{
+  display:none;
+}
+

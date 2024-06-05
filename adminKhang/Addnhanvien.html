@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Admin-Petcare</title>
+  <link rel="stylesheet" href="Boostrap/css/bootstrap.css">
+  <script href="Boostrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- Latest compiled JavaScript -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+  <link rel="stylesheet" href="Boostrap/css/bootstrap.css">
+  <script href="Boostrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" style="text-decoration: none;" class="logo d-flex align-items-center">
+        <img src="assets/img/PetCARE.png" alt="">
+        <span class="d-none d-lg-block">Admin</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-bell"></i>
+            <span class="badge bg-primary badge-number">4</span>
+          </a><!-- End Notification Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+            <li class="dropdown-header">
+              Bạn có 4 thông báo mới
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">Xem tất cả</span></a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-exclamation-circle text-warning"></i>
+              <div>
+                <h4>Quản lí</h4>
+                <p>Tấn chôm tiền đi bắn bi-a</p>
+                <p>30 phút trước</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-x-circle text-danger"></i>
+              <div>
+                <h4>Cảnh báo</h4>
+                <p>Có 4 nhân viên đến muộn hôm nay</p>
+                <p>1 giờ trước</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-check-circle text-success"></i>
+              <div>
+                <h4>Thông báo</h4>
+                <p>Quyết định sa thải đồng chí Tấn</p>
+                <p>2 giờ trước</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-info-circle text-primary"></i>
+              <div>
+                <h4>Thông báo</h4>
+                <p>Tấn dẫn các bác sĩ đi trộm chó</p>
+                <p>4 giờ trước</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li class="dropdown-footer">
+              <a href="#">Xem tất cả thông báo</a>
+            </li>
+
+          </ul><!-- End Notification Dropdown Items -->
+
+        </li><!-- End Notification Nav -->
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-chat-left-text"></i>
+            <span class="badge bg-success badge-number">3</span>
+          </a><!-- End Messages Icon -->
+          <style>
+            .message-item a {
+              text-decoration: none;
+            }
+          </style>
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
+            <li class="dropdown-header">
+              Bạn có 3 thông báo
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">Xem tất cả</span></a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/avt.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>Tấn</h4>
+                  <p>Nay xin nghỉ nhé</p>
+                  <p>4 giờ trước</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/avt2.png" alt="" class="rounded-circle">
+                <div>
+                  <h4>Nam</h4>
+                  <p>Tấn xin cho tôi nghỉ rồi nhé</p>
+                  <p>6 giờ trước</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="">
+                <img src="assets/img/avt.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>Khang</h4>
+                  <p>Đơn sa thải đồng chí Tấn đến đâu rồi</p>
+                  <p>8 giờ trước</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="dropdown-footer">
+              <a href="#">Hiển thị tất cả tin nhắn</a>
+            </li>
+
+          </ul><!-- End Messages Dropdown Items -->
+
+        </li><!-- End Messages Nav -->
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">Bùi An Khang</span>
+          </a><!-- End Profile Iamge Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Bùi An Khang</h6>
+              <span>Admin</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>Trang cá nhân</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-gear"></i>
+                <span>Cài đặt tài khoản</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Đăng xuất</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link " href="index.html">
+          <i class="fa-solid fa-house-user"></i>
+          <span>Trang chủ</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Quanlykhachhang.html">
+          <i class="fa-solid fa-person"></i></i><span>Quản lý khách hàng</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="Quanlynhanvien.html">
+          <i class="fa-solid fa-users-gear"></i><span>Quản lý nhân viên</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="Quanlysanpham.html">
+          <i class="fa-brands fa-product-hunt"></i><span>Quản lý sản phẩm</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="Quanlydichvu.html">
+          <i class="fa-brands fa-servicestack"></i><span>Quản lý dịch vụ</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="Quanlydonhang.html">
+          <i class="fa-solid fa-cart-shopping"></i><span>Quản lý đơn hàng</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="Bangluong.html">
+          <i class="fa-solid fa-coins"></i><span>Bảng kê lương</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="Baocaodoanhthu.html">
+          <i class="fa-solid fa-chart-line"></i><span>Báo cáo doanh thu</span>
+        </a>
+      </li>
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+  <div id="main" class="main">
+
+    <div class="pagetitle">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb" style="font-size: 22px;">
+          <li class="breadcrumb-item"><a href="Quanlynhanvien.html">Quản lý nhân viên</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Thêm nhân viên</li>
+        </ol>
+      </nav>
+
+      <!-- End Page Title -->
+      <form id="AddForm" class="AddForm row mt-4"
+        style="background-color: white;padding:20px;border-radius:20px;box-shadow: 2px 2px 2px #FFCC99;">
+        <div class="form-group col-md-4">
+          <label style="font-weight: bolder;" class="control-label">ID nhân viên</label>
+          <input class="form-control" id="idNV" onchange="checkID()" type="text">
+        </div>
+        <div class="form-group col-md-4">
+          <label style="font-weight: bolder;" class="control-label">Họ và tên</label>
+          <input class="form-control" id="nameNV" onclick="checkName()" onchange="checkName()" type="text">
+        </div>
+        <div class="form-group col-md-4">
+          <label style="font-weight: bolder;" class="control-label">Địa chỉ email</label>
+          <input class="form-control" id="emailNV" onclick="checkEmail()" onchange="checkEmail()" type="text">
+        </div>
+        <div class="form-group col-md-4">
+          <label style="font-weight: bolder;" class="control-label mt-3">Địa chỉ thường trú</label>
+          <input class="form-control" id="localNV" onclick="checkLocalNV()" onchange="checkLocalNV()" type="text">
+        </div>
+        <div class="form-group  col-md-4">
+          <label style="font-weight: bolder;" class="control-label mt-3">Số điện thoại</label>
+          <input class="form-control" id="phoneNV" onclick="checkPhone()" onchange="checkPhone()" type="text">
+        </div>
+        <div class="form-group col-md-4">
+          <label style="font-weight: bolder;" class="control-label mt-3">Ngày sinh</label>
+          <input class="form-control" id="dateNV" onclick="checkDateNV()" onchange="checkDateNV()" type="date">
+        </div>
+        <div class="form-group  col-md-3">
+          <label style="font-weight: bolder;" style="font-weight: bolder;" class="control-label mt-3">Nơi sinh</label>
+          <input class="form-control" id="noisinhNV" onclick="checkNoiSinhNV()" onchange="checkNoiSinhNV()" type="text">
+        </div>
+        <div class="form-group col-md-3">
+          <label style="font-weight: bolder;" class="control-label mt-3">Số CMND/CCCD</label>
+          <input class="form-control" onclick="checkCMND()" onchange="checkCMND()" id="CMND" type="text">
+        </div>
+        <div class="form-group col-md-3">
+          <label style="font-weight: bolder;" class="control-label mt-3">Ngày cấp</label>
+          <input class="form-control" id="date_cmnd" onclick="checkDateCMND()" onchange="checkDateCMND()" type="date">
+        </div>
+        <div class="form-group col-md-3">
+          <label style="font-weight: bolder;" class="control-label mt-3">Nơi cấp</label>
+          <input class="form-control" id="local_cmnd" onclick="checkLocalCMND" onchange="checkLocalCMND()" type="text">
+        </div>
+        <div class="form-group col-md-3">
+          <label style="font-weight: bolder;" class="control-label mt-3">Giới tính</label>
+          <select class="form-control" id="sex" onclick="checkSex()" onchange="checkSex()" id="exampleSelect2">
+            <option>Chọn giới tính</option>
+            <option>Nam</option>
+            <option>Nữ</option>
+            <option>Khác</option>
+          </select>
+        </div>
+
+        <div class="form-group  col-md-3">
+          <label style="font-weight: bolder;" for="exampleSelect1" class="control-label mt-3">Chức vụ</label>
+          <select class="form-control" onclick="checkChucVuNV()" onchange="checkChucVuNV()" id="chucvuNV">
+            <option>Chọn chức vụ</option>
+            <option>Bán hàng</option>
+            <option>Tư vấn</option>
+            <option>Dịch vụ</option>
+            <option>Bác sĩ thú y</option>
+            <option>Spa-Grooming</option>
+          </select>
+        </div>
+        <div class="form-group col-md-3">
+          <label style="font-weight: bolder;" class="control-label mt-3">Bằng cấp</label>
+          <select class="form-control" onclick="checkBangCapNV()" onchange="checkBangCapNV()" id="bangcapNV">
+            <option>Chọn bằng cấp</option>
+            <option>Tốt nghiệp Đại Học</option>
+            <option>Tốt nghiệp Cao Đẳng</option>
+            <option>Tốt nghiệp Phổ Thông</option>
+            <option>Chưa tốt nghiệp</option>
+            <option>Không bằng cấp</option>
+          </select>
+        </div>
+        <div class="form-group col-md-3">
+          <label style="font-weight: bolder;" class="control-label mt-3">Tình trạng hôn nhân</label>
+          <select class="form-control" onclick="checkHonNhanNV()" onchange="checkHonNhanNV()" id="honnhanNV">
+            <option>Chọn tình trạng hôn nhân</option>
+            <option>Độc thân</option>
+            <option>Đã kết hôn</option>
+            <option>Góa</option>
+            <option>Khác</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-12">
+          <label style="font-weight: bolder;" class="control-label mt-3">Ảnh 3x4 nhân viên</label>
+          <input class="form-control" style="width:50%" type="file" onchange="checkImgNV()" onclick="checkImgNV()"
+            id="uploadImgNV" name="ImageUpload">
+
+
+
+        </div>
+        <input class="btn btn-success mt-4" type="button" href="" id="addbutton" onclick="checkFormAddNV()"
+          style="width:10%" value="Thêm">
+      </form>
+    </div>
+
+  </div><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/chart.js"></script>
+  <script type="text/javascript">
+    const toastTrigger = document.getElementById('liveToastBtn')
+    const toastLiveExample = document.getElementById('liveToast')
+
+    if (toastTrigger) {
+      const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+      toastTrigger.addEventListener('click', () =>
+      {
+        toastBootstrap.show()
+      })
+    }
+    var data = {
+      labels: ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6"],
+      datasets: [{
+        label: "Dữ liệu đầu tiên",
+        fillColor: "rgba(255, 213, 59, 0.767), 212, 59)",
+        strokeColor: "rgb(255, 212, 59)",
+        pointColor: "rgb(255, 212, 59)",
+        pointStrokeColor: "rgb(255, 212, 59)",
+        pointHighlightFill: "rgb(255, 212, 59)",
+        pointHighlightStroke: "rgb(255, 212, 59)",
+        data: [20, 59, 90, 51, 56, 100]
+      },
+      {
+        label: "Dữ liệu kế tiếp",
+        fillColor: "rgba(9, 109, 239, 0.651)  ",
+        pointColor: "rgb(9, 109, 239)",
+        strokeColor: "rgb(9, 109, 239)",
+        pointStrokeColor: "rgb(9, 109, 239)",
+        pointHighlightFill: "rgb(9, 109, 239)",
+        pointHighlightStroke: "rgb(9, 109, 239)",
+        data: [48, 48, 49, 39, 86, 10]
+      }
+      ]
+    };
+    var ctxl = $("#lineChartDemo").get(0).getContext("2d");
+    var lineChart = new Chart(ctxl).Line(data);
+
+    var ctxb = $("#barChartDemo").get(0).getContext("2d");
+    var barChart = new Chart(ctxb).Bar(data);
+  </script>
+  <script>
+    function checkName ()
+    {
+      var name_correct =
+        /^[A-Za-z\sAÀẢÃÁẠĂẰẲẴẮẶÂẦẨẪẤẬBCDĐEÈẺẼÉẸÊỀỂỄẾỆFGHIÌỈĨÍỊJKLMNOÒỎÕÓỌÔỒỔỖỐỘƠỜỞỠỚỢPQRSTUÙỦŨÚỤƯỪỬỮỨỰVWXYỲỶỸÝỴZaàảãáạăằẳẵắặâầẩẫấậbcdđeèẻẽéẹêềểễếệfghiìỉĩíịjklmnoòỏõóọôồổỗốộơờởỡớợpqrstuùủũúụưừửữứựvwxyỳỷỹýỵz]+$/;
+      var name = document.getElementById("nameNV");
+      var name_val = document.getElementById("nameNV").value;
+      if (name_val == "" || name_correct.test(name_val) == false) {
+        name.classList.add("is-invalid");
+        return false;
+      } else {
+        name.classList.remove("is-invalid");
+        name.classList.add("is-valid");
+        return true;
+      }
+    }
+    function checkID ()
+    {
+      var id = document.getElementById("idNV");
+      var id_val = id.value;
+      if (id_val == "") {
+        id.classList.add("is-invalid");
+        return false;
+      } else {
+        id.classList.remove("is-invalid");
+        id.classList.add("is-valid");
+        return true;
+      }
+    }
+    function checkPhone ()
+    {
+      var correct_phone =
+        /^(0?)(3[2-9]|5[6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])[0-9]{7}$/;
+      var phone = document.getElementById("phoneNV");
+      var phone_val = parseInt(phone.value);
+      if (phone_val == "" || correct_phone.test(phone_val) == false) {
+        phone.classList.add("is-invalid");
+        return false;
+      } else {
+        phone.classList.remove("is-invalid");
+        phone.classList.add("is-valid");
+        return true;
+      }
+    }
+    function checkEmail ()
+    {
+      var correct_email =
+        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+      var email = document.getElementById("emailNV");
+      var email_val = email.value;
+      if (email_val == "" || correct_email.test(email_val) == false) {
+        email.classList.add("is-invalid");
+        return false;
+      } else {
+        email.classList.remove("is-invalid");
+        email.classList.add("is-valid");
+        return true;
+      }
+    }
+    function checkLocalNV ()
+    {
+      var locate_cus = document.getElementById("localNV");
+      var locate_val = locate_cus.value;
+      if (locate_val == "") {
+        locate_cus.classList.add("is-invalid");
+        return false;
+      } else {
+        locate_cus.classList.remove("is-invalid");
+        locate_cus.classList.add("is-valid");
+        return true;
+      }
+    }
+    function checkNoiSinhNV ()
+    {
+      var locate_cus = document.getElementById("noisinhNV");
+      var locate_val = locate_cus.value;
+      if (locate_val == "") {
+        locate_cus.classList.add("is-invalid");
+        return false;
+      } else {
+        locate_cus.classList.remove("is-invalid");
+        locate_cus.classList.add("is-valid");
+        return true;
+      }
+    }
+    function checkDateNV ()
+    {
+      var a = $("#dateNV").val();
+      var b = new Date(a);
+      if (!b.getTime()) {
+        $("#dateNV").addClass("is-invalid")
+        return false;
+      }
+      else {
+        $("#dateNV").removeClass("is-invalid");
+        $("#dateNV").addClass("is-valid");
+        return true;
+      }
+
+    }
+    function checkDateCMND ()
+    {
+      var a = $("#date_cmnd").val();
+      var b = new Date(a);
+      if (!b.getTime()) {
+        $("#date_cmnd").addClass("is-invalid")
+        return false;
+      }
+      else {
+        $("#date_cmnd").removeClass("is-invalid");
+        $("#date_cmnd").addClass("is-valid");
+        return true;
+      }
+
+    }
+    function checkLocalCMND ()
+    {
+      var locate_cus = document.getElementById("local_cmnd");
+      var locate_val = locate_cus.value;
+      if (locate_val == "") {
+        locate_cus.classList.add("is-invalid");
+        return false;
+      } else {
+        locate_cus.classList.remove("is-invalid");
+        locate_cus.classList.add("is-valid");
+        return true;
+      }
+    }
+    function checkSex ()
+    {
+      var city = document.getElementById("sex");
+      var city_val = city.value;
+      if (city_val === "Chọn giới tính") {
+        city.classList.add("is-invalid");
+        return false;
+      } else {
+        city.classList.remove("is-invalid");
+        city.classList.add("is-valid");
+        return true;
+      }
+    }
+    function checkChucVuNV ()
+    {
+      var city = document.getElementById("chucvuNV");
+      var city_val = city.value;
+      if (city_val === "Chọn chức vụ") {
+        city.classList.add("is-invalid");
+        return false;
+      } else {
+        city.classList.remove("is-invalid");
+        city.classList.add("is-valid");
+        return true;
+      }
+    }
+    function checkBangCapNV ()
+    {
+      var city = document.getElementById("bangcapNV");
+      var city_val = city.value;
+      if (city_val === "Chọn bằng cấp") {
+        city.classList.add("is-invalid");
+        return false;
+      } else {
+        city.classList.remove("is-invalid");
+        city.classList.add("is-valid");
+        return true;
+      }
+    }
+    function checkHonNhanNV ()
+    {
+      var city = document.getElementById("honnhanNV");
+      var city_val = city.value;
+      if (city_val === "Chọn tình trạng hôn nhân") {
+        city.classList.add("is-invalid");
+        return false;
+      } else {
+        city.classList.remove("is-invalid");
+        city.classList.add("is-valid");
+        return true;
+      }
+    }
+    function checkImgNV ()
+    {
+      var a = $("#uploadImgNV").val();
+      if (a.length <= 0) {
+        $("#uploadImgNV").addClass("is-invalid");
+      }
+      else {
+        $("#uploadImgNV").removeClass("is-invalid");
+        $("#uploadImgNV").addClass("is-valid");
+      }
+    }
+    function checkCMND ()
+    {
+      var locate_cus = document.getElementById("CMND");
+      var locate_val = locate_cus.value;
+      if (locate_val.length <= 8 || locate_val.length > 11 || locate_val.length == 10 || !parseInt(locate_val)) {
+        locate_cus.classList.add("is-invalid");
+        return false;
+      } else {
+        locate_cus.classList.remove("is-invalid");
+        locate_cus.classList.add("is-valid");
+        return true;
+      }
+    }
+    function checkFormAddNV ()
+    {
+      if (checkBangCapNV() == false || checkCMND() == false || checkChucVuNV() == false || checkDateCMND() == false || checkDateNV() == false || checkEmail() == false || checkHonNhanNV() == false || checkID() == false || checkImgNV() == false || checkLocalCMND() == false || checkLocalNV() == false || checkName() == false || checkNoiSinhNV() == false || checkPhone() == false || checkSex() == false) {
+        alert("Vui lòng kiểm tra lại thông tin");
+      }
+      else {
+        alert("Đã thêm thành công");
+        document.getElementById("AddForm").reset();
+        location.reload();
+      }
+    }
+  </script>
+
+
+</body>
+
+</html>

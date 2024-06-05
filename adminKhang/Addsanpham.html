@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Admin-Petcare</title>
+    <link rel="stylesheet" href="Boostrap/css/bootstrap.css">
+    <script href="Boostrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- Latest compiled JavaScript -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+    <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="Boostrap/css/bootstrap.css">
+    <script href="Boostrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+
+        <div class="d-flex align-items-center justify-content-between">
+            <a href="index.html" style="text-decoration: none;" class="logo d-flex align-items-center">
+                <img src="assets/img/PetCARE.png" alt="">
+                <span class="d-none d-lg-block">AdminPetcare</span>
+            </a>
+            <i class="bi bi-list toggle-sidebar-btn"></i>
+        </div><!-- End Logo -->
+
+        <div class="search-bar">
+            <form class="search-form d-flex align-items-center" method="POST" action="#">
+                <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+                <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+            </form>
+        </div><!-- End Search Bar -->
+
+        <nav class="header-nav ms-auto">
+            <ul class="d-flex align-items-center">
+
+                <li class="nav-item d-block d-lg-none">
+                    <a class="nav-link nav-icon search-bar-toggle " href="#">
+                        <i class="bi bi-search"></i>
+                    </a>
+                </li><!-- End Search Icon-->
+
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+                        <i class="bi bi-bell"></i>
+                        <span class="badge bg-primary badge-number">4</span>
+                    </a><!-- End Notification Icon -->
+
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+                        <li class="dropdown-header">
+                            Bạn có 4 thông báo mới
+                            <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">Xem tất cả</span></a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li class="notification-item">
+                            <i class="bi bi-exclamation-circle text-warning"></i>
+                            <div>
+                                <h4>Quản lí</h4>
+                                <p>Tấn chôm tiền đi bắn bi-a</p>
+                                <p>30 phút trước</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li class="notification-item">
+                            <i class="bi bi-x-circle text-danger"></i>
+                            <div>
+                                <h4>Cảnh báo</h4>
+                                <p>Có 4 nhân viên đến muộn hôm nay</p>
+                                <p>1 giờ trước</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li class="notification-item">
+                            <i class="bi bi-check-circle text-success"></i>
+                            <div>
+                                <h4>Thông báo</h4>
+                                <p>Quyết định sa thải đồng chí Tấn</p>
+                                <p>2 giờ trước</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li class="notification-item">
+                            <i class="bi bi-info-circle text-primary"></i>
+                            <div>
+                                <h4>Thông báo</h4>
+                                <p>Tấn dẫn các bác sĩ đi trộm chó</p>
+                                <p>4 giờ trước</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li class="dropdown-footer">
+                            <a href="#">Xem tất cả thông báo</a>
+                        </li>
+
+                    </ul><!-- End Notification Dropdown Items -->
+
+                </li><!-- End Notification Nav -->
+
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+                        <i class="bi bi-chat-left-text"></i>
+                        <span class="badge bg-success badge-number">3</span>
+                    </a><!-- End Messages Icon -->
+                    <style>
+                        .message-item a {
+                            text-decoration: none;
+                        }
+                    </style>
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
+                        <li class="dropdown-header">
+                            Bạn có 3 thông báo
+                            <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">Xem tất cả</span></a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li class="message-item">
+                            <a href="#">
+                                <img src="assets/img/avt.jpg" alt="" class="rounded-circle">
+                                <div>
+                                    <h4>Tấn</h4>
+                                    <p>Nay xin nghỉ nhé</p>
+                                    <p>4 giờ trước</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li class="message-item">
+                            <a href="#">
+                                <img src="assets/img/avt.jpg" alt="" class="rounded-circle">
+                                <div>
+                                    <h4>Nam</h4>
+                                    <p>Tấn xin cho tôi nghỉ rồi nhé</p>
+                                    <p>6 giờ trước</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li class="message-item">
+                            <a href="">
+                                <img src="assets/img/avt.jpg" alt="" class="rounded-circle">
+                                <div>
+                                    <h4>Khang</h4>
+                                    <p>Đơn sa thải đồng chí Tấn đến đâu rồi</p>
+                                    <p>8 giờ trước</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li class="dropdown-footer">
+                            <a href="#">Hiển thị tất cả tin nhắn</a>
+                        </li>
+
+                    </ul><!-- End Messages Dropdown Items -->
+
+                </li><!-- End Messages Nav -->
+
+                <li class="nav-item dropdown pe-3">
+
+                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                        <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+                        <span class="d-none d-md-block dropdown-toggle ps-2">Bùi An Khang</span>
+                    </a><!-- End Profile Iamge Icon -->
+
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                        <li class="dropdown-header">
+                            <h6>Bùi An Khang</h6>
+                            <span>Admin</span>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                                <i class="bi bi-person"></i>
+                                <span>Trang cá nhân</span>
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                                <i class="bi bi-gear"></i>
+                                <span>Cài đặt tài khoản</span>
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <i class="bi bi-box-arrow-right"></i>
+                                <span>Đăng xuất</span>
+                            </a>
+                        </li>
+
+                    </ul><!-- End Profile Dropdown Items -->
+                </li><!-- End Profile Nav -->
+
+            </ul>
+        </nav><!-- End Icons Navigation -->
+
+    </header><!-- End Header -->
+
+    <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar">
+
+        <ul class="sidebar-nav" id="sidebar-nav">
+
+            <li class="nav-item">
+                <a class="nav-link " href="index.html">
+                    <i class="fa-solid fa-house-user"></i>
+                    <span>Trang chủ</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Quanlykhachhang.html">
+                    <i class="fa-solid fa-person"></i></i><span>Quản lý khách hàng</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="Quanlynhanvien.html">
+                    <i class="fa-solid fa-users-gear"></i><span>Quản lý nhân viên</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="Quanlysanpham.html">
+                    <i class="fa-brands fa-product-hunt"></i><span>Quản lý sản phẩm</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="Quanlydichvu.html">
+                    <i class="fa-brands fa-servicestack"></i><span>Quản lý dịch vụ</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="Quanlydonhang.html">
+                    <i class="fa-solid fa-cart-shopping"></i><span>Quản lý đơn hàng</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="Bangluong.html">
+                    <i class="fa-solid fa-coins"></i><span>Bảng kê lương</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="Baocaodoanhthu.html">
+                    <i class="fa-solid fa-chart-line"></i><span>Báo cáo doanh thu</span>
+                </a>
+            </li>
+
+        </ul>
+
+    </aside><!-- End Sidebar-->
+    <script>
+        function checkID ()
+        {
+            var id = document.getElementById("idpro");
+            var id_val = id.value;
+            if (id_val == "") {
+                id.classList.add("is-invalid");
+                return false;
+            } else {
+                id.classList.remove("is-invalid");
+                id.classList.add("is-valid");
+                return true;
+            }
+        }
+        function checkName ()
+        {
+            var name_correct =
+                /^[A-Za-z\sAÀẢÃÁẠĂẰẲẴẮẶÂẦẨẪẤẬBCDĐEÈẺẼÉẸÊỀỂỄẾỆFGHIÌỈĨÍỊJKLMNOÒỎÕÓỌÔỒỔỖỐỘƠỜỞỠỚỢPQRSTUÙỦŨÚỤƯỪỬỮỨỰVWXYỲỶỸÝỴZaàảãáạăằẳẵắặâầẩẫấậbcdđeèẻẽéẹêềểễếệfghiìỉĩíịjklmnoòỏõóọôồổỗốộơờởỡớợpqrstuùủũúụưừửữứựvwxyỳỷỹýỵz]+$/;
+            var name = document.getElementById("namepro");
+            var name_val = document.getElementById("namepro").value;
+            if (name_val == "" || name_correct.test(name_val) == false) {
+                name.classList.add("is-invalid");
+                return false;
+            } else {
+                name.classList.remove("is-invalid");
+                name.classList.add("is-valid");
+                return true;
+            }
+        }
+        function checkCount ()
+        {
+            var a = $("#countpro");
+            var b = a.val();
+            if (b <= 0) {
+                a.addClass("is-invalid");
+                return false;
+            }
+            else {
+                a.removeClass("is-invalid");
+                a.addClass("is-valid");
+                return true;
+            }
+        }
+        function checkCount ()
+        {
+            var a = $("#countpro");
+            var b = a.val();
+            if (b <= 0 || !parseInt(b)) {
+                a.addClass("is-invalid");
+                return false;
+            }
+            else {
+                a.removeClass("is-invalid");
+                a.addClass("is-valid");
+                return true;
+            }
+        }
+        function checkGiaBanPro ()
+        {
+            var a = $("#giabanpro");
+            var b = a.val();
+            if (b <= 0 || !parseInt(b)) {
+                a.addClass("is-invalid");
+                return false
+            }
+            else {
+                a.removeClass("is-invalid");
+                a.addClass("is-valid");
+                return true;
+            }
+        }
+        function checkGiaVonPro ()
+        {
+            var a = $("#giavonpro");
+            var b = a.val();
+            if (b <= 0 || !parseInt(b)) {
+                a.addClass("is-invalid");
+                return false;
+            }
+            else {
+                a.removeClass("is-invalid");
+                a.addClass("is-valid");
+                return true;
+            }
+        }
+        function checkDanhMuc ()
+        {
+            var a = $("#danhmucAddpro");
+            var b = a.val();
+            if (b === "Chọn danh mục") {
+                a.addClass("is-invalid");
+                return false;
+            }
+            else {
+                a.removeClass("is-invalid");
+                a.addClass("is-valid");
+                return true;
+            }
+        }
+        function checkTinhTrang ()
+        {
+            var a = $("#tinhtrangAddpro");
+            var b = a.val();
+            if (b === "Chọn tình trạng") {
+                a.addClass("is-invalid");
+                return false;
+            }
+            else {
+                a.removeClass("is-invalid");
+                a.addClass("is-valid");
+                return true;
+            }
+        }
+        function checkImg ()
+        {
+            var a = $("#imagepro");
+            var b = a.val();
+            if (b <= 0) {
+                a.addClass("is-invalid");
+                return false;
+            }
+            else {
+                a.removeClass("is-invalid");
+                a.addClass("is-valid");
+                return true;
+            }
+        }
+        function AddPro ()
+        {
+            if (checkCount() == false || checkDanhMuc() == false || checkGiaBanPro() == false || checkGiaVonPro() == false || checkID() == false || checkImg() == false || checkName() == false || checkTinhTrang() == false) {
+                alert("Vui lòng kiểm tra lại thông tin sản phẩm");
+            }
+            else {
+                alert("Thêm thành công !");
+                location.reload();
+            }
+        }
+
+    </script>
+    <div id="main" class="main">
+
+        <div class="pagetitle">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb" style="font-size: 22px;">
+                    <li class="breadcrumb-item"><a href="Quanlysanpham.html">Quản lý sản phẩm</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Thêm sản phẩm</li>
+                </ol>
+            </nav>
+            <div style="background-color: white;padding:20px;border-radius:20px;box-shadow: 2px 2px 2px #FFCC99;">
+                <!-- End Page Title -->
+                <form method="submit" id="AddProForm" class="row mt-4">
+                    <div class="form-group col-md-4">
+                        <label style="font-weight: bolder;" class="control-label">Mã sản phẩm</label>
+                        <input class="form-control" id="idpro" onclick="checkID()" onchange="checkID()" type="text">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label style="font-weight: bolder;" class="control-label">Tên sản phẩm</label>
+                        <input class="form-control" id="namepro" onclick="checkName()" onchange="checkName()"
+                            type="text" required>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label style="font-weight: bolder;" class="control-label">Số lượng</label>
+                        <input class="form-control" onclick="checkCount()" onchange="checkCount()" id="countpro"
+                            type="text" required>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label style="font-weight: bolder;" class="control-label mt-3">Giá bán(VND)</label>
+                        <input class="form-control" id="giabanpro" onclick="checkGiaBanPro()"
+                            onchange="checkGiaBanPro()" type="text" required>
+                    </div>
+                    <div class="form-group  col-md-4">
+                        <label style="font-weight: bolder;" class="control-label mt-3">Giá vốn(VND)</label>
+                        <input class="form-control" id="giavonpro" onclick="checkGiaVonPro()"
+                            onchange="checkGiaVonPro()" type="text" required>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label style="font-weight: bolder;" class="control-label mt-3">Danh mục</label>
+                        <select class="form-control" onclick="checkDanhMuc()" onchange="checkDanhMuc()"
+                            id="danhmucAddpro" required>
+                            <option>Chọn danh mục</option>
+                            <option>Pate</option>
+                            <option>Thức ăn hạt</option>
+                            <option>Thực phẩm chức năng</option>
+                            <option>Đồ chơi</option>
+                            <option>Dụng cụ</option>
+                            <option>Phụ kiện</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group  col-md-3">
+                        <label style="font-weight: bolder;" for="exampleSelect1" class="control-label mt-3">Tình
+                            trạng</label>
+                        <select class="form-control" onclick="checkTinhTrang()" onchange="checkTinhTrang()"
+                            id="tinhtrangAddpro">
+                            <option>Chọn tình trạng</option>
+                            <option>Còn hàng</option>
+                            <option>Hết hàng</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-12">
+                        <label style="font-weight: bolder;" class="control-label mt-3">Ảnh sản phẩm</label>
+                        <input class="form-control" onclick="checkImg()" onmouseover="checkImg()" onchange="checkImg()"
+                            id="imagepro" style="width:30%" type="file">
+                    </div>
+
+
+                    <input class="btn btn-success mt-4 ms-2" onclick="AddPro()" type="button" id="buttonAddPro"
+                        style="width:10%" value="Thêm">
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/chart.js/chart.umd.js"></script>
+    <script src="assets/vendor/echarts/echarts.min.js"></script>
+    <script src="assets/vendor/quill/quill.js"></script>
+    <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/chart.js"></script>
+    <script type="text/javascript">
+        const toastTrigger = document.getElementById('liveToastBtn')
+        const toastLiveExample = document.getElementById('liveToast')
+
+        if (toastTrigger) {
+            const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+            toastTrigger.addEventListener('click', () =>
+            {
+                toastBootstrap.show()
+            })
+        }
+        var data = {
+            labels: ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6"],
+            datasets: [{
+                label: "Dữ liệu đầu tiên",
+                fillColor: "rgba(255, 213, 59, 0.767), 212, 59)",
+                strokeColor: "rgb(255, 212, 59)",
+                pointColor: "rgb(255, 212, 59)",
+                pointStrokeColor: "rgb(255, 212, 59)",
+                pointHighlightFill: "rgb(255, 212, 59)",
+                pointHighlightStroke: "rgb(255, 212, 59)",
+                data: [20, 59, 90, 51, 56, 100]
+            },
+            {
+                label: "Dữ liệu kế tiếp",
+                fillColor: "rgba(9, 109, 239, 0.651)  ",
+                pointColor: "rgb(9, 109, 239)",
+                strokeColor: "rgb(9, 109, 239)",
+                pointStrokeColor: "rgb(9, 109, 239)",
+                pointHighlightFill: "rgb(9, 109, 239)",
+                pointHighlightStroke: "rgb(9, 109, 239)",
+                data: [48, 48, 49, 39, 86, 10]
+            }
+            ]
+        };
+        var ctxl = $("#lineChartDemo").get(0).getContext("2d");
+        var lineChart = new Chart(ctxl).Line(data);
+
+        var ctxb = $("#barChartDemo").get(0).getContext("2d");
+        var barChart = new Chart(ctxb).Bar(data);
+    </script>
+
+
+</body>
+
+</html>

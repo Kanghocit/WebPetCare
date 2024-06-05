@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Admin-Petcare</title>
+    <link rel="stylesheet" href="Boostrap/css/bootstrap.css">
+    <script href="Boostrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- Latest compiled JavaScript -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+    <link rel="stylesheet" href="Boostrap/css/bootstrap.css">
+    <script href="Boostrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+    <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+
+        <div class="d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo d-flex align-items-center">
+                <img src="assets/img/PetCARE.png" alt="">
+                <span class="d-none d-lg-block">Admin</span>
+            </a>
+            <i class="bi bi-list toggle-sidebar-btn"></i>
+        </div><!-- End Logo -->
+
+        <div class="search-bar">
+            <form class="search-form d-flex align-items-center" method="POST" action="#">
+                <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+                <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+            </form>
+        </div><!-- End Search Bar -->
+
+        <nav class="header-nav ms-auto">
+            <ul class="d-flex align-items-center">
+
+                <li class="nav-item d-block d-lg-none">
+                    <a class="nav-link nav-icon search-bar-toggle " href="#">
+                        <i class="bi bi-search"></i>
+                    </a>
+                </li><!-- End Search Icon-->
+
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+                        <i class="bi bi-bell"></i>
+                        <span class="badge bg-primary badge-number">4</span>
+                    </a><!-- End Notification Icon -->
+
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+                        <li class="dropdown-header">
+                            Bạn có 4 thông báo mới
+                            <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">Xem tất cả</span></a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li class="notification-item">
+                            <i class="bi bi-exclamation-circle text-warning"></i>
+                            <div>
+                                <h4>Quản lí</h4>
+                                <p>Tấn chôm tiền đi bắn bi-a</p>
+                                <p>30 phút trước</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li class="notification-item">
+                            <i class="bi bi-x-circle text-danger"></i>
+                            <div>
+                                <h4>Cảnh báo</h4>
+                                <p>Có 4 nhân viên đến muộn hôm nay</p>
+                                <p>1 giờ trước</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li class="notification-item">
+                            <i class="bi bi-check-circle text-success"></i>
+                            <div>
+                                <h4>Thông báo</h4>
+                                <p>Quyết định sa thải đồng chí Tấn</p>
+                                <p>2 giờ trước</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li class="notification-item">
+                            <i class="bi bi-info-circle text-primary"></i>
+                            <div>
+                                <h4>Thông báo</h4>
+                                <p>Tấn dẫn các bác sĩ đi trộm chó</p>
+                                <p>4 giờ trước</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li class="dropdown-footer">
+                            <a href="#">Xem tất cả thông báo</a>
+                        </li>
+
+                    </ul><!-- End Notification Dropdown Items -->
+
+                </li><!-- End Notification Nav -->
+
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+                        <i class="bi bi-chat-left-text"></i>
+                        <span class="badge bg-success badge-number">3</span>
+                    </a><!-- End Messages Icon -->
+
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
+                        <li class="dropdown-header">
+                            Bạn có 3 thông báo
+                            <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">Xem tất cả</span></a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li class="message-item">
+                            <a href="#">
+                                <img src="assets/img/profile-img.jpg" alt="" class="rounded-circle">
+                                <div>
+                                    <h4>Tấn</h4>
+                                    <p>Nay xin nghỉ nhé</p>
+                                    <p>4 giờ trước</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li class="message-item">
+                            <a href="#">
+                                <img src="assets/img/avt.jpg" alt="" class="rounded-circle">
+                                <div>
+                                    <h4>Nam</h4>
+                                    <p>Tấn xin cho tôi nghỉ rồi nhé</p>
+                                    <p>6 giờ trước</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li class="message-item">
+                            <a href="#">
+                                <img src="assets/img/avt.jpg" alt="" class="rounded-circle">
+                                <div>
+                                    <h4>Khang</h4>
+                                    <p>Đơn sa thải đồng chí Tấn đến đâu rồi</p>
+                                    <p>8 giờ trước</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li class="dropdown-footer">
+                            <a href="#">Hiển thị tất cả tin nhắn</a>
+                        </li>
+
+                    </ul><!-- End Messages Dropdown Items -->
+
+                </li><!-- End Messages Nav -->
+
+                <li class="nav-item dropdown pe-3">
+                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                        <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+                        <span class="d-none d-md-block dropdown-toggle ps-2">Bùi An Khang</span>
+                    </a><!-- End Profile Iamge Icon -->
+
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                        <li class="dropdown-header">
+                            <h6>Bùi An Khang</h6>
+                            <span>Admin</span>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                                <i class="bi bi-person"></i>
+                                <span>Trang cá nhân</span>
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                                <i class="bi bi-gear"></i>
+                                <span>Cài đặt tài khoản</span>
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <i class="bi bi-box-arrow-right"></i>
+                                <span>Đăng xuất</span>
+                            </a>
+                        </li>
+
+                    </ul><!-- End Profile Dropdown Items -->
+                </li><!-- End Profile Nav -->
+
+            </ul>
+        </nav><!-- End Icons Navigation -->
+
+    </header><!-- End Header -->
+
+    <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar">
+
+        <ul class="sidebar-nav" id="sidebar-nav">
+
+            <li class="nav-item">
+                <a class="nav-link " href="index.html">
+                    <i class="fa-solid fa-house-user"></i>
+                    <span>Trang chủ</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Quanlykhachhang.html">
+                    <i class="fa-solid fa-person"></i></i><span>Quản lý khách hàng</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="Quanlynhanvien.html">
+                    <i class="fa-solid fa-users-gear"></i><span>Quản lý nhân viên</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="Quanlysanpham.html">
+                    <i class="fa-brands fa-product-hunt"></i><span>Quản lý sản phẩm</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="Quanlydichvu.html">
+                    <i class="fa-brands fa-servicestack"></i><span>Quản lý dịch vụ</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="Quanlydonhang.html">
+                    <i class="fa-solid fa-cart-shopping"></i><span>Quản lý đơn hàng</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="Bangluong.html">
+                    <i class="fa-solid fa-coins"></i><span>Bảng kê lương</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="Baocaodoanhthu.html">
+                    <i class="fa-solid fa-chart-line"></i><span>Báo cáo doanh thu</span>
+                </a>
+            </li>
+
+        </ul>
+
+    </aside><!-- End Sidebar-->
+
+    <div id="main" class="main">
+
+        <div class="pagetitle">
+            <h1>Quản lý khách hàng</h1>
+            <!-- End Page Title -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="tile">
+                        <div class="tile-body">
+                            <!--
+                            <div class="button-function d-flex justify-content-between mt-3 mb-4" style="width:70%">
+
+
+                                <button id="uploadfile" class="btn btn-secondary btn-sm nhap-tu-file" type="button"
+                                    title="Nhập" onclick="myFunction(this)"><i class="fas fa-file-upload"></i>>
+                                    Tải từ file</button>
+
+
+
+                                <a class="btn btn-primary btn-sm print-file" type="button" title="In"
+                                    onclick="myApp.printTable()"><i class="fas fa-print"></i> In dữ liệu</a>
+
+
+                                <a class="btn btn-warning btn-sm print-file js-textareacopybtn" type="button"
+                                    title="Sao chép"><i class="fas fa-copy"></i> Sao chép</a>
+
+
+
+                                <a class="btn btn-success btn-sm" href="" title="In"><i class="fas fa-file-excel"></i>
+                                    Xuất Excel</a>
+
+
+                                <a class="btn btn-danger btn-sm pdf-file" type="button" title="In"
+                                    onclick="myFunction(this)"><i class="fas fa-file-pdf"></i> Xuất PDF</a>
+
+                            </div>
+                            -->
+                            <div class="search mt-4 mb-4 input-group" style="width:50%">
+                                <button class="input-group-text btn btn-success"><i
+                                        class="fa-solid fa-magnifying-glass"></i></button>
+                                <input class="form-control" type="text" id="searchCustomer">
+                            </div>
+
+                            <table class="table table-hover table-bordered text-center" cellpadding="0" cellspacing="0"
+                                border="1" id="sampleTable">
+                                <thead>
+                                    <tr class="table-primary">
+                                        <th width="10"></th>
+                                        <th>ID khách hàng</th>
+                                        <th width="150">Họ và tên</th>
+                                        <th width="300">Địa chỉ</th>
+                                        <th>Ngày sinh</th>
+                                        <th>Giới tính</th>
+                                        <th>SĐT</th>
+                                        <th>Gmail</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="table-customer">
+                                    <tr>
+                                        <td width="10"><input type="checkbox" name="check1" value="1"></td>
+                                        <td>#CD12837</td>
+                                        <td>Hồ Thị Thanh Ngân</td>
+                                        <td>155-157 Trần Quốc Thảo, Quận 3, Hồ Chí Minh </td>
+                                        <td>12/02/1999</td>
+                                        <td>Nữ</td>
+                                        <td>0926737168</td>
+                                        <td>ngandd1234@gmail.com</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td width="10"><input type="checkbox" name="check2" value="2"></td>
+                                        <td>#SX22837</td>
+                                        <td>Trần Khả Ái</td>
+                                        <td>6 Nguyễn Lương Bằng, Tân Phú, Quận 7, Hồ Chí Minh</td>
+                                        <td>22/12/1999</td>
+                                        <td>Nữ</td>
+                                        <td>0931342432</td>
+                                        <td>ainthh1@gmail.com</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td width="10"><input type="checkbox" name="check3" value="3"></td>
+                                        <td>#LO2871</td>
+                                        <td>Phạm Thu Cúc</td>
+                                        <td>Số 3 Hòa Bình, Phường 3, Quận 11, Hồ Chí Minh </td>
+                                        <td>02/06/1998</td>
+                                        <td>Nữ</td>
+                                        <td>0931491997</td>
+                                        <td>cucyjg123@gmail.com</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td width="10"><input type="checkbox"></td>
+                                        <td>#SR28746</td>
+                                        <td>Trần Anh Khoa</td>
+                                        <td>19 Đường Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh </td>
+                                        <td>18/02/1995</td>
+                                        <td>Nam</td>
+                                        <td>0916706633</td>
+                                        <td>khoa343@gmail.com</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td width="10"><input type="checkbox"></td>
+                                        <td>#KJS276</td>
+                                        <td>Nguyễn Thành Nhân</td>
+                                        <td>Số 13, Tân Thuận Đông, Quận 7, Hồ Chí Minh </td>
+                                        <td>10/03/1996</td>
+                                        <td>Nam</td>
+                                        <td>0971038066</td>
+                                        <td>nhanasfd1@gmail.com</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td width="10"><input type="checkbox"></td>
+                                        <td>#BS76228</td>
+                                        <td>Nguyễn Đặng Trọng Nhân</td>
+                                        <td>59C Nguyễn Đình Chiểu, Quận 3, Hồ Chí Minh </td>
+                                        <td>23/07/1996</td>
+                                        <td>Nam</td>
+                                        <td>0846881155</td>
+                                        <td>nhanaal12@gmail.com</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td width="10"><input type="checkbox"></td>
+                                        <td>#YUI21376</td>
+                                        <td>Nguyễn Thị Mai</td>
+                                        <td>Đường Số 3, Tân Tạo A, Bình Tân, Hồ Chí Minh</td>
+                                        <td>09/12/2000</td>
+                                        <td>Nữ </td>
+                                        <td>0836333037</td>
+                                        <td>mai1234@gmail.com</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/chart.js/chart.umd.js"></script>
+    <script src="assets/vendor/echarts/echarts.min.js"></script>
+    <script src="assets/vendor/quill/quill.js"></script>
+    <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/chart.js"></script>
+    <script type="text/javascript">
+        var data = {
+            labels: ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6"],
+            datasets: [{
+                label: "Dữ liệu đầu tiên",
+                fillColor: "rgba(255, 213, 59, 0.767), 212, 59)",
+                strokeColor: "rgb(255, 212, 59)",
+                pointColor: "rgb(255, 212, 59)",
+                pointStrokeColor: "rgb(255, 212, 59)",
+                pointHighlightFill: "rgb(255, 212, 59)",
+                pointHighlightStroke: "rgb(255, 212, 59)",
+                data: [20, 59, 90, 51, 56, 100]
+            },
+            {
+                label: "Dữ liệu kế tiếp",
+                fillColor: "rgba(9, 109, 239, 0.651)  ",
+                pointColor: "rgb(9, 109, 239)",
+                strokeColor: "rgb(9, 109, 239)",
+                pointStrokeColor: "rgb(9, 109, 239)",
+                pointHighlightFill: "rgb(9, 109, 239)",
+                pointHighlightStroke: "rgb(9, 109, 239)",
+                data: [48, 48, 49, 39, 86, 10]
+            }
+            ]
+        };
+        var ctxl = $("#lineChartDemo").get(0).getContext("2d");
+        var lineChart = new Chart(ctxl).Line(data);
+
+        var ctxb = $("#barChartDemo").get(0).getContext("2d");
+        var barChart = new Chart(ctxb).Bar(data);
+    </script>
+
+    <script>
+        $(document).ready(function ()
+        {
+            $("#searchCustomer").on("keyup", function ()
+            {
+                var value = $(this).val().toLowerCase();
+                $("#table-customer tr").filter(function ()
+                {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
