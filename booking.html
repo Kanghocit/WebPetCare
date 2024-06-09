@@ -140,7 +140,7 @@
 
     </div>
     <!-- Booking -->
-    <div class="container mt-4 border pdt">
+    <div class="container mt-4 border pdt mb-5">
         <h3 class="service text-capitalize">ĐẶT LỊCH NGAY</h3>
         <hr>
         <div class="row">
@@ -151,23 +151,33 @@
           <div class="col-8 align-items-left d-flex justify-content-left ps-5">
             <form style="width:50%"  class="align-items-center" name="booking_form" >
                 <div class="form-group">
-                    <h6 class="text-center">Thông tin của Boss</h6>
-                  <label for="Bossname">Tên của Boss</label>
+                  <h6 class="text-center">Thông tin của Boss</h6>
+                  <label class="pb-2" for="Bossname">Tên của Boss</label>
                 <input  onclick="checknameBookingForm()" onkeyup="checknameBookingForm()" type="text" class="form-control bossname" id="Bossname" name="Bossname"  placeholder="Nhập tên của boss">
                 
                 </div>
                 <div class="form-group">
-                  <label for="Bosstype">Boss là: </label>
+                  <label class="pb-2" for="Bosstype">Boss là: </label>
                 <input onclick="checktypeBookingForm()" onkeyup="checktypeBookingForm()"  type="text" class="form-control" id="Bosstype"  placeholder="Chó, mèo hoặc khác">
                 
                 </div>
                 <div class="form-group">
-                    <label for="Bossweight">Cân nặng(kg): </label>
+                    <label class="pb-2" for="Bossweight">Cân nặng(kg): </label>
                   <input onclick="checkweightBookingForm()" onkeyup="checkweightBookingForm()" type="text" class="form-control" id="Bossweight"  placeholder="Điền cân nặng của Boss">
-                </div>      
-                <div class="Date">
+                </div>
+                <div class="form-group">
+                  <label class="pb-2" for="Bossweight">Chọn dịch vụ: </label>
+                  <select name="" id="" class="form-control">
+                    <option value="">Gói tắm cơ bản</option>
+                    <option value="">Gói tắm combo</option>
+                    <option value="">Gói cắt tỉa cơ bản</option>
+                    <option value="">Gói sạch toàn thân</option>
+                    <option value="">Gói triệt sản</option>
+                  </select>
+                </div>        
+                <div class="Date form-group" >
                     <p>Chọn lịch</p>
-                    <input required type="datetime-local">
+                    <input required type="datetime-local" class="form-control">
                 </div>
             </form>
         </div>
@@ -205,34 +215,106 @@
 
 
       
-    <!-- Footer Start -->
-    <div class="container-fluid d-flex justify-content-around bg-dark mt-5" >
-      <div class="footer1 d-flex align-items-center flex-column p-3">
-              <h1 class="mb-3 mt-4  text-capitalize"style="color:#F7A98F">PetCare</h1>
-              <p class="text-white">Giờ hoạt động: 8AM-10PM</p>
+   <!-- footer -->
+<footer class = "bg-dark py-5">
+  <div class = "container">
+      <div class = "row text-white g-4">
+          <div class = "col-md-6 col-lg-3">
+              <a class = "text-uppercase text-decoration-none brand text-white" href = "index.html">PetCare</a>
+              <p class = "text-white  mt-3">THE BEST CHOICE FOR YOU <i class="fa-solid text-danger fa-heart"></i></p>
           </div>
-          <div class="footer2 mt-3 text-white d-flex flex-column justify-content-between p-3">
-            <h3>Get in touch</h3>
-            <span>
-              <h6><i class="fa-solid fa-envelope-circle-check fa-lg me-3" style="color: #ffffff;"></i>petcare@gmail.com</h6>
-            </span>
-            <span>
-              <h6><i class="fa-solid fa-phone fa-lg me-4" style="color: #ffffff;"></i>0912345678</h6>
-            </span>
-            <span>
-              <h6><i class="fa-solid fa-location-dot fa-lg me-4" style="color: #ffffff;"></i>Láng Thượng, Đống Đa, Hà Nội</h6>
-             </span>
+
+          <div class = "col-md-6 col-lg-3">
+              <h5 class = "fw-light">Links</h5>
+              <ul class = "list-unstyled">
+                  <li class = "my-3">
+                      <a href = "#" class = "text-white text-decoration-none ">
+                          <i class = "fas fa-chevron-right me-1"></i> Trang Chủ
+                      </a>
+                  </li>
+                  <li class = "my-3">
+                      <a href = "#" class = "text-white text-decoration-none ">
+                          <i class = "fas fa-chevron-right me-1"></i> Sản Phẩm
+                      </a>
+                  </li>
+                  <li class = "my-3">
+                      <a href = "#" class = "text-white text-decoration-none ">
+                          <i class = "fas fa-chevron-right me-1"></i> Dịch vụ
+                      </a>
+                  </li>
+                  <li class = "my-3">
+                      <a href = "#" class = "text-white text-decoration-none ">
+                          <i class = "fas fa-chevron-right me-1"></i> Giới Thiệu
+                      </a>
+                  </li>
+              </ul>
           </div>
-          <div class="footer3 d-flex text-white flex-column mt-3 justify-content-between p-3 text-center">
-            <h3>Popular links</h3>
-            <a href="#"><i class="fa-brands fa-facebook fa-lg me-3" style="color: #ffffff;"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram fa-lg me-3" style="color: #ffffff;"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube fa-lg me-3" style="color: #ffffff;"></i></a>
+
+          <div class = "col-md-6 col-lg-3">
+              <h5 class = "fw-light mb-3">Contact Us</h5>
+              <div class = "d-flex justify-content-start align-items-start my-2 ">
+                  <span class = "me-3">
+                      <i class = "fas fa-map-marked-alt"></i>
+                  </span>
+                  <span class = "fw-light">
+                    10 Đường Hà Huy Tập, Hưng Bình, Thành phố Vinh, Nghệ An 460000, Việt Nam
+                  </span>
+              </div>
+              
+              <div class = "d-flex justify-content-start align-items-start my-2 ">
+                  <span class = "me-3">
+                      <i class = "fas fa-envelope"></i>
+                  </span>
+                  <span class = "fw-light">
+                      petcare123@gmail.com
+                  </span>
+              </div>
+              <div class = "d-flex justify-content-start align-items-start my-2 ">
+                  <span class = "me-3">
+                      <i class = "fas fa-phone-alt"></i>
+                  </span>
+                  <span class = "fw-light">
+                      +0123 456 789
+                  </span>
+              </div>
+              
           </div>
-       
+
+          <div class = "col-md-6 col-lg-3">
+              <h5 class = "fw-light mb-3">Follow Us</h5>
+              <div>
+                  <ul class = "list-unstyled d-flex">
+                      <li>
+                          <a href = "#" class = "text-white text-decoration-none  fs-4 me-4">
+                              <i class = "fab fa-facebook-f"></i>
+                          </a>
+                      </li>
+                      <li>
+                          <a href = "#" class = "text-white text-decoration-none  fs-4 me-4">
+                              <i class = "fab fa-twitter"></i>
+                          </a>
+                      </li>
+                      <li>
+                          <a href = "#" class = "text-white text-decoration-none  fs-4 me-4">
+                              <i class = "fab fa-instagram"></i>
+                          </a>
+                      </li>
+                      <li>
+                          <a href = "#" class = "text-white text-decoration-none  fs-4 me-4">
+                              <i class = "fab fa-pinterest"></i>
+                          </a>
+                      </li>
+                  </ul>
+                  
+              </div>
+              <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3779.4780560955396!2d105.67846227479575!3d18.687403582438723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3139ce0c8d6f4b7f%3A0xed2ff861dc713dc1!2zUGV0Q2FyZSAtIFBldCBzaG9wLCB04buJYSBsw7RuZywgdOG6r20sIHRpw6ptIHBow7JuZywgYsOhbiB0aOG7qWMgxINuIHbDoCBwaOG7pSBraeG7h24gY2jDsyBtw6hv!5e0!3m2!1svi!2s!4v1717919233932!5m2!1svi!2s" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+          </div>
       </div>
-   
-    <!-- Footer End -->
+  </div>
+</footer>
+<!-- end of footer -->
     <script src="js/script.js"></script>
 </body>
 </html>

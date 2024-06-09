@@ -1,0 +1,44 @@
+.heading {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    padding: 1rem;
+    margin: 2rem 0;
+    background-color: rgba(255, 51, 153, .05);
+}
+.heading span {
+    color:pink;
+}
+.about .row{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+}
+.about .row .video-container{
+    flex: 1 1 40rem;
+    position: relative;
+}
+.about .row .video-container video{
+    width: 100%;
+    border: 1.5rem solid #fff;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+.about .row .video-container h3{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background: #fff;
+    width: 100%;
+    padding: 1rem 2rem;
+    text-align: center;
+    mix-blend-mode: screen;
+
+}
+.about .row .content{
+    flex: 1 1 40rem;
+}
