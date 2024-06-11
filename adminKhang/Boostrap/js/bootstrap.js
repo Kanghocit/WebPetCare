@@ -544,12 +544,7 @@
     return obj;
   }
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap dom/manipulator.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
+  
 
   function normalizeData(value) {
     if (value === 'true') {
@@ -812,12 +807,6 @@
     }
   };
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap util/component-functions.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
 
   const enableDismissTrigger = (component, method = 'hide') => {
     const clickEvent = `click.dismiss${component.EVENT_KEY}`;
@@ -837,17 +826,7 @@
     });
   };
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap alert.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-
-
-  /**
-   * Constants
-   */
+ 
 
   const NAME$f = 'alert';
   const DATA_KEY$a = 'bs.alert';
@@ -912,17 +891,7 @@
 
   defineJQueryPlugin(Alert);
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap button.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-
-
-  /**
-   * Constants
-   */
+ 
 
   const NAME$e = 'button';
   const DATA_KEY$9 = 'bs.button';
@@ -976,17 +945,6 @@
 
   defineJQueryPlugin(Button);
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap util/swipe.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-
-
-  /**
-   * Constants
-   */
 
   const NAME$d = 'swipe';
   const EVENT_KEY$9 = '.bs.swipe';
@@ -1096,18 +1054,7 @@
     }
   }
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap carousel.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-
-
-  /**
-   * Constants
-   */
-
+  
   const NAME$c = 'carousel';
   const DATA_KEY$8 = 'bs.carousel';
   const EVENT_KEY$8 = `.${DATA_KEY$8}`;
@@ -1279,13 +1226,7 @@
           return;
         }
 
-        // If it's a touch-enabled device, mouseenter/leave are fired as
-        // part of the mouse compatibility events on first tap - the carousel
-        // would stop cycling until user tapped out of it;
-        // here, we listen for touchend, explicitly pause the carousel
-        // (as if it's the second time we tap on it, mouseenter compat event
-        // is NOT fired) and after a timeout (to allow for mouse compatibility
-        // events to fire) we explicitly restart cycling
+       
 
         this.pause();
         if (this.touchTimeout) {
@@ -1469,17 +1410,7 @@
 
   defineJQueryPlugin(Carousel);
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap collapse.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-
-
-  /**
-   * Constants
-   */
+ 
 
   const NAME$b = 'collapse';
   const DATA_KEY$7 = 'bs.collapse';

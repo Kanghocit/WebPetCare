@@ -1436,13 +1436,7 @@
       const endCallBack = () => {
         if (this._config.pause !== 'hover') {
           return;
-        } // If it's a touch-enabled device, mouseenter/leave are fired as
-        // part of the mouse compatibility events on first tap - the carousel
-        // would stop cycling until user tapped out of it;
-        // here, we listen for touchend, explicitly pause the carousel
-        // (as if it's the second time we tap on it, mouseenter compat event
-        // is NOT fired) and after a timeout (to allow for mouse compatibility
-        // events to fire) we explicitly restart cycling
+        }
 
 
         this.pause();
@@ -2167,7 +2161,7 @@
 
   function getLayoutRect(element) {
     var clientRect = getBoundingClientRect(element); // Use the clientRect sizes if it's not been transformed.
-    // Fixes https://github.com/popperjs/popper-core/issues/1223
+   
 
     var width = element.offsetWidth;
     var height = element.offsetHeight;
@@ -2821,7 +2815,7 @@
 
     if (!isElement(clipperElement)) {
       return [];
-    } // $FlowFixMe[incompatible-return]: https://github.com/facebook/flow/issues/1414
+    } 
 
 
     return clippingParents.filter(function (clippingParent) {
