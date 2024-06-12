@@ -376,7 +376,8 @@
                                     </tr>
                                 </thead>
                                 <tbody id="table-product">
-                                    <tr>
+
+                                    <tr id="pro1">
                                         <td width="10"><input type="checkbox" name="check1" value="1"></td>
                                         <td>71309005</td>
                                         <td>Sữa pha Precaten</td>
@@ -781,10 +782,11 @@ MODAL
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    Xóa thành công
+                    Xác nhận xóa
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    <button id="del" type="button" class="btn btn-primary" data-bs-dismiss="modal">Xác nhận</button>
 
                 </div>
             </div>
@@ -842,8 +844,14 @@ MODAL
         var barChart = new Chart(ctxb).Bar(data);
     </script>
     <script>
+
+
         $(document).ready(function ()
         {
+            $("#del").click(function ()
+            {
+                $("#pro1").css("display", "none");
+            })
             $("#searchProduct").on("keyup", function ()
             {
                 var value = $(this).val().toLowerCase();

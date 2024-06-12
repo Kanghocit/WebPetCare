@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <title>Pet Care</title>
-    <link rel="shortcut icon" type="image/png" href="images/logo/PetCARE.png">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-        <link rel="stylesheet" href="css/user-responsive.css">
-        <link rel="stylesheet" href="css/user1.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    </head>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Care</title>
+  <link rel="shortcut icon" type="image/png" href="images/logo/PetCARE.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/user-responsive.css">
+  <link rel="stylesheet" href="css/user1.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
 <body>
-   <!--Header -->
-   <div class="header container-fluid mb-3 fixed-top">
+  <!--Header -->
+  <div class="header container-fluid mb-3 fixed-top">
     <div class="row bg-dark  py-2 px-lg-5 ">
       <div class="col-lg-6 text-left  mb-2 mb-lg-0 d-inline-flex">
         <a class="text-white px-3" href="">
@@ -107,12 +109,12 @@
           </button>
         </div>
       </nav>
-      
+
     </div>
-   
+
 
   </div>
-    <!-- 
+  <!-- 
 <div class="menu-phone" >
     <div><a href="index1.html">Trang chủ </a></div>
     <div><a href="about.html">Giới thiệu  </a></div>
@@ -121,314 +123,341 @@
     <div><a href="booking.html">Đặt lịch </a></div>
     <div><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i>Giỏ hàng</a></div>
 </div>-->
-<!--header end-->
+  <!--header end-->
 
-    <!-- main images
+  <!-- main images
     <div class="main_img mt-2">
 
     </div> -->
-    <!-- 
+  <!-- 
     <div class="service mt-3">
         <h4 class="text-capitalize">Giỏ hàng</h4>
         <i class="fa-solid fa-heart"></i>
 
     </div>-->
-    <div class="container-fluid pdt" style="background-color:#C0C0C0">
-<br>
-    <div class="container giohang p-5" style="border:1px solid gray;border-radius: 5px;box-shadow: 5px 5px 5px  black;background-color: white">
+  <div class="container-fluid pdt" style="background-color:#C0C0C0">
+    <br>
+    <div class="container giohang p-5"
+      style="border:1px solid gray;border-radius: 5px;box-shadow: 5px 5px 5px  black;background-color: white">
       <div class="d-flex justify-content-between">
-      <h3 class="pb-4"style="font-weight:bolder ">Giỏ hàng<span><i class="fa-solid fa-basket-shopping" style="margin-left:20px;color: #ad2810;"></i></span></h3>
-      <p>1 sản phẩm</p>
-    </div>
-    <hr>
-    <div class=" cart-body mt-3 mb-3">
+        <h3 class="pb-4" style="font-weight:bolder ">Giỏ hàng<span><i class="fa-solid fa-basket-shopping"
+              style="margin-left:20px;color: #ad2810;"></i></span></h3>
+        <p>1 sản phẩm</p>
+      </div>
+      <hr>
+      <div class=" cart-body mt-3 mb-3">
         <div class="cart-product d-flex justify-content-between align-items-center">
-            <div class="product-intro d-flex">
-                <div class="product-img" style="border-radius:5px">
-                    <img style="width:100px;height:100px" src="images/product/dochoi/dc1.jpg" class="img-float img-thumbnail">
-                </div>
-                <div class="ml-3 product-detail d-flex justify-content-center align-items-center flex-wrap ">
-                   <p class="ms-4">Đồ chơi cho pet dạng bóng</p> 
-                </div>
+          <div class="product-intro d-flex">
+            <div class="product-img" style="border-radius:5px">
+              <img style="width:100px;height:100px" src="images/product/dochoi/dc1.jpg" class="img-float img-thumbnail">
             </div>
-            <div class="cost-product d-flex justify-content-center align-items-center">
-                <div class="soluong">
-                  <button onclick="decrease_count()" type="button" id="increase-count" style="border:none;border-radius:5px;width:30px">-</button>
-                    <input value="1" id="current_count" style="width:20%;text-align: center;">
-                    <button onclick="increase_count()" id="decrease-count" style="border:none;border-radius:5px;width:30px">+</button>
-                </div>
-                <div >
-                    <p>Giá tiền : <span class="text-danger" id="giatien">250.000</span><span class="text-danger">đ</span></p>
-                </div>
-                
+            <div class="ml-3 product-detail d-flex justify-content-center align-items-center flex-wrap ">
+              <p class="ms-4">Đồ chơi cho pet dạng bóng</p>
             </div>
-            <div class="function">
-                <button type="button" class="btn btn-danger">Xóa</button>
+          </div>
+          <div class="cost-product d-flex justify-content-center align-items-center">
+            <div class="soluong">
+              <button onclick="decrease_count()" type="button" id="increase-count"
+                style="border:none;border-radius:5px;width:30px">-</button>
+              <input value="1" id="current_count" style="width:20%;text-align: center;">
+              <button onclick="increase_count()" id="decrease-count"
+                style="border:none;border-radius:5px;width:30px">+</button>
             </div>
-        
+            <div>
+              <p>Giá tiền : <span class="text-danger" id="giatien">250.000</span><span class="text-danger">đ</span></p>
+            </div>
+
+          </div>
+          <div class="function">
+            <button type="button" class="btn btn-danger">Xóa</button>
+          </div>
+
         </div>
         <hr>
-        
-        
-        
-    </div>
-    <p style="text-align: right;" >Total Price: <strong><span id="total">250.000</span><span>đ</span></strong></p>
-    <div class="d-flex justify-content-end">
-        <button id="thanhtoan"  class="btn btn-success mb-3">Thanh toán</button>
-    </div>
-  
+
+
+
+      </div>
+      <p style="text-align: right;">Total Price: <strong><span id="total">250.000</span><span>đ</span></strong></p>
+      <div class="d-flex justify-content-end">
+        <button id="thanhtoan" class="btn btn-success mb-3">Thanh toán</button>
+      </div>
+
     </div>
     <br>
-    <div id="pay-form" style="display:none" >
-    <div class="container mt-4 d-flex flex-column justify-content-center" id="pay-form" >
+    <div id="pay-form" style="display:none">
+      <div class="container mt-4 d-flex flex-column justify-content-center" id="pay-form">
         <div class="customer-detail bg-light" style="border:1px solid gray;border-radius:5px;padding:10px">
-           <div class="mt-3"><strong>Thông tin khách hàng</strong></div> 
-            <form class="mt-4">
-                <input onclick="checkCustomerDetailName()" onkeyup="checkCustomerDetailName()" id="name" type="text" class="form-control mb-3" placeholder="Họ và tên" required>
-                <p style="color:red;display:none" id="errorName">Xin vui lòng kiểm tra lại</p>
-                <input onclick="checkCustomerDetailPhone()" onkeyup="checkCustomerDetailPhone()"  id="phonenumber" type="text" class="form-control" placeholder="Số điện thoại" required>
-                <p style="color:red;display:none" id="errorPhone">Vui lòng nhập số điện thoại chính xác</p>
-                <div>
-                    <select  onmouseenter="checkCity()"  onmouseout="checkCity()" class="form-select form-select-sm mb-3" id="city" aria-label=".form-select-sm">
-                    <option value="" selected>Chọn tỉnh thành</option>           
-                    </select>
-                              
-                    <select onmouseenter="checkDistrict()" onmouseout="checkDistrict()" class="form-select form-select-sm mb-3" id="district" aria-label=".form-select-sm">
-                    <option  value="" selected>Chọn quận huyện</option>
-                    </select>
-                    
-                    <select onmouseenter="checkWard()" onmouseout="checkWard()" class="form-select form-select-sm" id="ward" aria-label=".form-select-sm">
-                    <option value="" selected>Chọn phường xã</option>
-                    </select>
-                     </div>   
-                     <input onclick="checkCustomerDetailLocate()" onkeyup="checkCustomerDetailLocate()" id="address" type="text" class="form-control mt-2" placeholder="Địa chỉ chi tiết" required>
-                     <input onclick="checkCustomerDetailEmail()" onkeyup="checkCustomerDetailEmail()" id="email" type="email" class="form-control" placeholder="Email" required>
-                     <p style="color:red;display:none" id="errorEmail">Vui lòng nhập đúng địa chỉ emai!</p>
-                     <p>Ghi chú (nếu có)</p>
-                     <textarea id="description" type="text" style="width:100%;resize:none;border-radius:5px">
-                     </textarea>
-                     <button id="verifyCustomerDetail" type="button" onclick="verify()" class="btn btn-primary">Xác nhận</button>
-            
-        <div class="payment mt-5 bg-light" id="payment" style="display:none;border:1px solid gray;border-radius:5px;padding:10px">
-           <div class="mb-2">
-            <strong>
-                Chọn phương thức thanh toán
-            </strong>
-        </div> 
-            <div class="payment-1">
-              <input type="radio" checked value="payment1" name="payment" id="payment"> 
-              <label style="font-weight: bolder;" for="payment-1">Thanh toán bằng phương thức COD</label>
-              <div class="payment1-detail" >
-              <p>
-                - Quý khách vui lòng thanh toán toàn bộ giá trị đơn hàng cho nhân viên giao hàng
-              </p>
-              <span>
-                <strong>Lưu ý: </strong>
-                <p>Trong trường hợp có bất cứ vấn đề gì về đơn hàng sau khi thanh toán quý khách vui lòng liên hệ qua bên tổng đài qua số Hotline: <strong>0912345669</strong></p>
-            </span>
-            </div>
-           </div>
+          <div class="mt-3"><strong>Thông tin khách hàng</strong></div>
+          <form class="mt-4">
+            <input onclick="checkCustomerDetailName()" onkeyup="checkCustomerDetailName()" id="name" type="text"
+              class="form-control mb-3" placeholder="Họ và tên" required>
+            <p style="color:red;display:none" id="errorName">Xin vui lòng kiểm tra lại</p>
+            <input onclick="checkCustomerDetailPhone()" onkeyup="checkCustomerDetailPhone()" id="phonenumber"
+              type="text" class="form-control" placeholder="Số điện thoại" required>
+            <p style="color:red;display:none" id="errorPhone">Vui lòng nhập số điện thoại chính xác</p>
+            <div>
+              <select onmouseenter="checkCity()" onmouseout="checkCity()" class="form-select form-select-sm mb-3"
+                id="city" aria-label=".form-select-sm">
+                <option value="" selected>Chọn tỉnh thành</option>
+              </select>
 
-           <div class="payment-2">
-            <input type="radio" value="payment2" name="payment" id="payment"> 
-            <label style="font-weight: bolder;" for="payment-2">Thanh toán bằng phương thức chuyển khoản</label>
-            <div class="payment2-detail" >
-                <p>
-            
-              Chủ tài khoản: NGUYEN PHUONG NAM
-            
-        </p>
-        <p>Số tài khoản: 0123456789</p>
-        <p>Nội dung chuyển khoản: <span class="text-danger"> [Họ tên khách hàng + số điện thoại] - Vui lòng nhập thông tin đúng với thông tin đã điền ở phía trên</span></p>
-            <span>
-              <strong>Lưu ý: </strong>
-              <p>Trong trường hợp có bất cứ vấn đề gì về đơn hàng sau khi thanh toán quý khách vui lòng liên hệ qua bên tổng đài qua số Hotline: <strong>0912345669</strong></p>
-          </span>
-          </div>
-         </div>
-         <button type="button" style="width:15%" id="confirm-payment" class="btn btn-danger mt-3" data-bs-toggle="modal" data-bs-target="#modalconfirmpayment">
-          Xác nhận thanh toán
-        </button>
-        </div>
-        
-        <!-- Button trigger modal -->
-  
-  <!-- Modal -->
-  <div class="modal fade" id="modalconfirmpayment" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Thông báo</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          Bạn đã thanh toán thành công !
-        </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-success" data-bs-dismiss="modal">Xác nhận</button>
+              <select onmouseenter="checkDistrict()" onmouseout="checkDistrict()"
+                class="form-select form-select-sm mb-3" id="district" aria-label=".form-select-sm">
+                <option value="" selected>Chọn quận huyện</option>
+              </select>
+
+              <select onmouseenter="checkWard()" onmouseout="checkWard()" class="form-select form-select-sm" id="ward"
+                aria-label=".form-select-sm">
+                <option value="" selected>Chọn phường xã</option>
+              </select>
+            </div>
+            <input onclick="checkCustomerDetailLocate()" onkeyup="checkCustomerDetailLocate()" id="address" type="text"
+              class="form-control mt-2" placeholder="Địa chỉ chi tiết" required>
+            <input onclick="checkCustomerDetailEmail()" onkeyup="checkCustomerDetailEmail()" id="email" type="email"
+              class="form-control" placeholder="Email" required>
+            <p style="color:red;display:none" id="errorEmail">Vui lòng nhập đúng địa chỉ emai!</p>
+            <p>Ghi chú (nếu có)</p>
+            <textarea id="description" type="text" style="width:100%;resize:none;border-radius:5px">
+                     </textarea>
+            <button id="verifyCustomerDetail" type="button" onclick="verify()" class="btn btn-primary">Xác nhận</button>
+
+            <div class="payment mt-5 bg-light" id="payment"
+              style="display:none;border:1px solid gray;border-radius:5px;padding:10px">
+              <div class="mb-2">
+                <strong>
+                  Chọn phương thức thanh toán
+                </strong>
+              </div>
+              <div class="payment-1">
+                <input type="radio" checked value="payment1" name="payment" id="payment">
+                <label style="font-weight: bolder;" for="payment-1">Thanh toán bằng phương thức COD</label>
+                <div class="payment1-detail">
+                  <p>
+                    - Quý khách vui lòng thanh toán toàn bộ giá trị đơn hàng cho nhân viên giao hàng
+                  </p>
+                  <span>
+                    <strong>Lưu ý: </strong>
+                    <p>Trong trường hợp có bất cứ vấn đề gì về đơn hàng sau khi thanh toán quý khách vui lòng liên hệ
+                      qua bên tổng đài qua số Hotline: <strong>0912345669</strong></p>
+                  </span>
+                </div>
+              </div>
+
+              <div class="payment-2">
+                <input type="radio" value="payment2" name="payment" id="payment">
+                <label style="font-weight: bolder;" for="payment-2">Thanh toán bằng phương thức chuyển khoản</label>
+                <div class="payment2-detail">
+                  <p>
+
+                    Chủ tài khoản: NGUYEN PHUONG NAM
+
+                  </p>
+                  <p>Số tài khoản: 0123456789</p>
+                  <p>Nội dung chuyển khoản: <span class="text-danger"> [Họ tên khách hàng + số điện thoại] - Vui lòng
+                      nhập thông tin đúng với thông tin đã điền ở phía trên</span></p>
+                  <span>
+                    <strong>Lưu ý: </strong>
+                    <p>Trong trường hợp có bất cứ vấn đề gì về đơn hàng sau khi thanh toán quý khách vui lòng liên hệ
+                      qua bên tổng đài qua số Hotline: <strong>0912345669</strong></p>
+                  </span>
+                </div>
+              </div>
+              <button type="button" style="width:15%" id="confirm-payment" class="btn btn-danger mt-3"
+                data-bs-toggle="modal" data-bs-target="#modalconfirmpayment">
+                Xác nhận thanh toán
+              </button>
+            </div>
+
+            <!-- Button trigger modal -->
+
+            <!-- Modal -->
+            <div class="modal fade" id="modalconfirmpayment" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Thông báo</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    Bạn đã thanh toán thành công !
+                  </div>
+                  <div class="modal-footer">
+                    <button type="submit" class="btn btn-success" data-bs-dismiss="modal">Xác nhận</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
         </div>
       </div>
-    </div>
-  </div>
-        
-
-    </div>
-    </div>
-  </form>
-    <br>
+      </form>
+      <br>
     </div>
     <script>
-        $(document).ready(function(){
-            $("#thanhtoan").click(function(){
-             $("#pay-form").toggle();
-    })
+      $(document).ready(function ()
+      {
+        $("#thanhtoan").click(function ()
+        {
+          $("#pay-form").toggle();
         })
-    </script>   
+      })
+    </script>
     <!-- footer -->
-<footer class = "bg-dark py-5">
-  <div class = "container">
-      <div class = "row text-white g-4">
-          <div class = "col-md-6 col-lg-3">
-              <a class = "text-uppercase text-decoration-none brand text-white" href = "index.html">PetCare</a>
-              <p class = "text-white  mt-3">THE BEST CHOICE FOR YOU <i class="fa-solid text-danger fa-heart"></i></p>
+    <footer class="bg-dark py-5">
+      <div class="container">
+        <div class="row text-white g-4">
+          <div class="col-md-6 col-lg-3">
+            <a class="text-uppercase text-decoration-none brand text-white" href="index.html">PetCare</a>
+            <p class="text-white  mt-3">THE BEST CHOICE FOR YOU <i class="fa-solid text-danger fa-heart"></i></p>
           </div>
 
-          <div class = "col-md-6 col-lg-3">
-              <h5 class = "fw-light">Links</h5>
-              <ul class = "list-unstyled">
-                  <li class = "my-3">
-                      <a href = "#" class = "text-white text-decoration-none ">
-                          <i class = "fas fa-chevron-right me-1"></i> Trang Chủ
-                      </a>
-                  </li>
-                  <li class = "my-3">
-                      <a href = "#" class = "text-white text-decoration-none ">
-                          <i class = "fas fa-chevron-right me-1"></i> Sản Phẩm
-                      </a>
-                  </li>
-                  <li class = "my-3">
-                      <a href = "#" class = "text-white text-decoration-none ">
-                          <i class = "fas fa-chevron-right me-1"></i> Dịch vụ
-                      </a>
-                  </li>
-                  <li class = "my-3">
-                      <a href = "#" class = "text-white text-decoration-none ">
-                          <i class = "fas fa-chevron-right me-1"></i> Giới Thiệu
-                      </a>
-                  </li>
+          <div class="col-md-6 col-lg-3">
+            <h5 class="fw-light">Links</h5>
+            <ul class="list-unstyled">
+              <li class="my-3">
+                <a href="#" class="text-white text-decoration-none ">
+                  <i class="fas fa-chevron-right me-1"></i> Trang Chủ
+                </a>
+              </li>
+              <li class="my-3">
+                <a href="#" class="text-white text-decoration-none ">
+                  <i class="fas fa-chevron-right me-1"></i> Sản Phẩm
+                </a>
+              </li>
+              <li class="my-3">
+                <a href="#" class="text-white text-decoration-none ">
+                  <i class="fas fa-chevron-right me-1"></i> Dịch vụ
+                </a>
+              </li>
+              <li class="my-3">
+                <a href="#" class="text-white text-decoration-none ">
+                  <i class="fas fa-chevron-right me-1"></i> Giới Thiệu
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <h5 class="fw-light mb-3">Contact Us</h5>
+            <div class="d-flex justify-content-start align-items-start my-2 ">
+              <span class="me-3">
+                <i class="fas fa-map-marked-alt"></i>
+              </span>
+              <span class="fw-light">
+                10 Đường Hà Huy Tập, Hưng Bình, Thành phố Vinh, Nghệ An 460000, Việt Nam
+              </span>
+            </div>
+
+            <div class="d-flex justify-content-start align-items-start my-2 ">
+              <span class="me-3">
+                <i class="fas fa-envelope"></i>
+              </span>
+              <span class="fw-light">
+                petcare123@gmail.com
+              </span>
+            </div>
+            <div class="d-flex justify-content-start align-items-start my-2 ">
+              <span class="me-3">
+                <i class="fas fa-phone-alt"></i>
+              </span>
+              <span class="fw-light">
+                +0123 456 789
+              </span>
+            </div>
+
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <h5 class="fw-light mb-3">Follow Us</h5>
+            <div>
+              <ul class="list-unstyled d-flex">
+                <li>
+                  <a href="#" class="text-white text-decoration-none  fs-4 me-4">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="text-white text-decoration-none  fs-4 me-4">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="text-white text-decoration-none  fs-4 me-4">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="text-white text-decoration-none  fs-4 me-4">
+                    <i class="fab fa-pinterest"></i>
+                  </a>
+                </li>
               </ul>
-          </div>
 
-          <div class = "col-md-6 col-lg-3">
-              <h5 class = "fw-light mb-3">Contact Us</h5>
-              <div class = "d-flex justify-content-start align-items-start my-2 ">
-                  <span class = "me-3">
-                      <i class = "fas fa-map-marked-alt"></i>
-                  </span>
-                  <span class = "fw-light">
-                    10 Đường Hà Huy Tập, Hưng Bình, Thành phố Vinh, Nghệ An 460000, Việt Nam
-                  </span>
-              </div>
-              
-              <div class = "d-flex justify-content-start align-items-start my-2 ">
-                  <span class = "me-3">
-                      <i class = "fas fa-envelope"></i>
-                  </span>
-                  <span class = "fw-light">
-                      petcare123@gmail.com
-                  </span>
-              </div>
-              <div class = "d-flex justify-content-start align-items-start my-2 ">
-                  <span class = "me-3">
-                      <i class = "fas fa-phone-alt"></i>
-                  </span>
-                  <span class = "fw-light">
-                      +0123 456 789
-                  </span>
-              </div>
-              
+            </div>
+            <div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3779.4780560955396!2d105.67846227479575!3d18.687403582438723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3139ce0c8d6f4b7f%3A0xed2ff861dc713dc1!2zUGV0Q2FyZSAtIFBldCBzaG9wLCB04buJYSBsw7RuZywgdOG6r20sIHRpw6ptIHBow7JuZywgYsOhbiB0aOG7qWMgxINuIHbDoCBwaOG7pSBraeG7h24gY2jDsyBtw6hv!5e0!3m2!1svi!2s!4v1717919233932!5m2!1svi!2s"
+                width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
           </div>
-
-          <div class = "col-md-6 col-lg-3">
-              <h5 class = "fw-light mb-3">Follow Us</h5>
-              <div>
-                  <ul class = "list-unstyled d-flex">
-                      <li>
-                          <a href = "#" class = "text-white text-decoration-none  fs-4 me-4">
-                              <i class = "fab fa-facebook-f"></i>
-                          </a>
-                      </li>
-                      <li>
-                          <a href = "#" class = "text-white text-decoration-none  fs-4 me-4">
-                              <i class = "fab fa-twitter"></i>
-                          </a>
-                      </li>
-                      <li>
-                          <a href = "#" class = "text-white text-decoration-none  fs-4 me-4">
-                              <i class = "fab fa-instagram"></i>
-                          </a>
-                      </li>
-                      <li>
-                          <a href = "#" class = "text-white text-decoration-none  fs-4 me-4">
-                              <i class = "fab fa-pinterest"></i>
-                          </a>
-                      </li>
-                  </ul>
-                  
-              </div>
-              <div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3779.4780560955396!2d105.67846227479575!3d18.687403582438723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3139ce0c8d6f4b7f%3A0xed2ff861dc713dc1!2zUGV0Q2FyZSAtIFBldCBzaG9wLCB04buJYSBsw7RuZywgdOG6r20sIHRpw6ptIHBow7JuZywgYsOhbiB0aOG7qWMgxINuIHbDoCBwaOG7pSBraeG7h24gY2jDsyBtw6hv!5e0!3m2!1svi!2s!4v1717919233932!5m2!1svi!2s" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div>
-          </div>
+        </div>
       </div>
-  </div>
-</footer>
-<!-- end of footer -->
+    </footer>
+    <!-- end of footer -->
     <script src="js/script.js"></script>
-   
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
     <script>
-	var citis = document.getElementById("city");
-var districts = document.getElementById("district");
-var wards = document.getElementById("ward");
-var Parameter = {
-  url: "https://raw.githubusercontent.com/kenzouno1/DiaGioiHanhChinhVN/master/data.json", 
-  method: "GET", 
-  responseType: "application/json", 
-};
-var promise = axios(Parameter);
-promise.then(function (result) {
-  renderCity(result.data);
-});
+      var citis = document.getElementById("city");
+      var districts = document.getElementById("district");
+      var wards = document.getElementById("ward");
+      var Parameter = {
+        url: "https://raw.githubusercontent.com/kenzouno1/DiaGioiHanhChinhVN/master/data.json",
+        method: "GET",
+        responseType: "application/json",
+      };
+      var promise = axios(Parameter);
+      promise.then(function (result)
+      {
+        renderCity(result.data);
+      });
 
-function renderCity(data) {
-  for (const x of data) {
-    citis.options[citis.options.length] = new Option(x.Name, x.Id);
-  }
-  citis.onchange = function () {
-    district.length = 1;
-    ward.length = 1;
-    if(this.value != ""){
-      const result = data.filter(n => n.Id === this.value);
+      function renderCity (data)
+      {
+        for (const x of data) {
+          citis.options[citis.options.length] = new Option(x.Name, x.Id);
+        }
+        citis.onchange = function ()
+        {
+          district.length = 1;
+          ward.length = 1;
+          if (this.value != "") {
+            const result = data.filter(n => n.Id === this.value);
 
-      for (const k of result[0].Districts) {
-        district.options[district.options.length] = new Option(k.Name, k.Id);
+            for (const k of result[0].Districts) {
+              district.options[district.options.length] = new Option(k.Name, k.Id);
+            }
+          }
+        };
+        district.onchange = function ()
+        {
+          ward.length = 1;
+          const dataCity = data.filter((n) => n.Id === citis.value);
+          if (this.value != "") {
+            const dataWards = dataCity[0].Districts.filter(n => n.Id === this.value)[0].Wards;
+
+            for (const w of dataWards) {
+              wards.options[wards.options.length] = new Option(w.Name, w.Id);
+            }
+          }
+        };
       }
-    }
-  };
-  district.onchange = function () {
-    ward.length = 1;
-    const dataCity = data.filter((n) => n.Id === citis.value);
-    if (this.value != "") {
-      const dataWards = dataCity[0].Districts.filter(n => n.Id === this.value)[0].Wards;
-
-      for (const w of dataWards) {
-        wards.options[wards.options.length] = new Option(w.Name, w.Id);
-      }
-    }
-  };
-}
-	</script>
+    </script>
 </body>
+
 </html>
